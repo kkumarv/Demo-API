@@ -5,7 +5,7 @@ echo $1
 repo="$1"
 echo "${repo}"
 pwd
-if [ -d "${repo}"]
+if [ -d "Demp-API"]
 then
     echo "Directory ${repo}exists." 
 else
