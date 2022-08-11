@@ -1,0 +1,54 @@
+pool: apiee-test
+trigger:  none
+pr: none
+
+variables:
+  ${{ if eq( variables['Build.SourceBranchName'], 'main' ) }}: 
+    organisation: prod
+  ${{ if ne( variables['Build.SourceBranchName'], 'main' ) }}: 
+    organisation: nonprod
+    repositoryName: $[replace(variables['Build.Repository.Name'], 'kkumarv/', '')]
+
+stages:
+- stage: Precheck
+  displayName: Static-Code-Analysis
+  condition: always()
+
+  jobs:
+  - job: Codeanalysis
+    continueOnError: false
+    steps:
+    - task: ShellScript@2
+      inputs:
+        scriptPath: ./validateDir.sh
+        args: '$(repositoryName)'
+    - script: |
+       echo "$(repositoryName)"
+       ls
+       apigeelint -s HelloWorld/apiproxy -f table.js
+
+# - stage: Deployment
+#   displayName: API-Deployment
+#   dependsOn: Precheck
+#   condition: and(succeeded(), ne(variables['build.sourceBranch'], 'refs/heads/main'))
+
+#   jobs:
+#   - job: APIDeployment
+#     continueOnError: false
+#     condition: always()
+#     steps:
+#     - script: |
+#        ls
+#        cd HelloWorld
+#        mvn install -Pdev -Dapigee.config.options=none
+#   - job: integrationtest
+#     continueOnError: false
+#     dependsOn: APIDeployment
+#     condition: succeeded()
+#     steps:
+#     - script: |
+      
+       
+#         newman run  HelloWorld/resources/postman-integration-test/MTN_CICD.postman_collection.json -e HelloWorld/resources/postman-integration-test/chenosis-dev.postman_environment.json
+
+       

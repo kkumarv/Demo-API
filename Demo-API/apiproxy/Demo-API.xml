@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="6" name="Andritz_Evaluation">
+    <Basepaths>/demo/api</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1660067372962</CreatedAt>
+    <CreatedBy>krishna.v@nagarro.com</CreatedBy>
+    <Description>This proxy is used for  Demo.</Description>
+    <DisplayName>HelloTest</DisplayName>
+    <LastModifiedAt>1660067372962</LastModifiedAt>
+    <LastModifiedBy>krishna.v@nagarro.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:75d07788a321ea05a145282cb4f314eb9a0df372974cd00199cb30aa34ac9f8c37491915c765054edf0305d65c1523ff243fd7b3e263a3e30a153d189ae3a131:ap-northeast-1</ManifestVersion>
+    <Policies>
+        <Policy>AM_SetPayload</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+</APIProxy>
