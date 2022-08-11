@@ -1,11 +1,13 @@
 #!/bin/bash
 echo "To check the directories"
-echo "AGENT_WORKFOLDER is $AGENT_WORKFOLDER"
+#echo "AGENT_WORKFOLDER is $AGENT_WORKFOLDER"
+echo $1
+repo="$1"
+echo "${repo}"
 pwd
-ls
-if [ -d "$1"] 
+if [ -d "$1"]
 then
-    echo "Directory ${1} exists." 
+    echo "Directory ${repo}exists." 
 else
     exit 9999
 fi

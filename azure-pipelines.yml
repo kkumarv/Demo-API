@@ -20,8 +20,15 @@ stages:
     steps:
     - task: ShellScript@2
       inputs:
-        scriptPath: ./validateDir.sh
-        args: '$(repositoryName)'
+        targetType: 'inline'
+        script: |
+         if [ -d "${repositoryName}"]
+          then
+              echo "Directory ${repositoryName}exists." 
+          else
+              exit 9999
+          fi
+        
     - script: |
        echo "$(repositoryName)"
        ls
