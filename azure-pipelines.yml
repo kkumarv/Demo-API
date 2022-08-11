@@ -19,14 +19,14 @@ stages:
   condition: always()
 
   jobs:
-  - job: API Directory Validation
+  - job: API-Directory-Validation
     continueOnError: false
     steps:
     - task: ShellScript@2
       inputs:
         scriptPath: ./validateDir.sh
         args: "$(repositoryName)"
-  - job: Static Code Analysis
+  - job: Static-Code-Analysis
     continueOnError: false
     steps:
     - script: |
