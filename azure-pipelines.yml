@@ -22,7 +22,7 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
-         if [ -d "$(repositoryName)"]
+         if [ -d "Demo-API"]
          then
               echo "Directory $(repositoryName) exists." 
          else
