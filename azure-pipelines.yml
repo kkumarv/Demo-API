@@ -22,6 +22,7 @@ stages:
       inputs:
         targetType: 'inline'
         script: |
+         ls
          if [ -d "Demo-API"]
          then
               echo "Directory $(repositoryName) exists." 
