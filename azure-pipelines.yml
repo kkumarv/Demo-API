@@ -21,7 +21,7 @@ stages:
     - task: ShellScript@2
       inputs:
         scriptPath: ./validateDir.sh
-        args: '${repositoryName}'
+        args: 'Demo-API'
     - script: |
        echo "$(repositoryName)"
        ls
