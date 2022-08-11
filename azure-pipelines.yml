@@ -1,5 +1,9 @@
 pool: apiee-test
-trigger:  none
+trigger:
+  branches:
+    include:
+    - master
+    - feature*
 pr: none
 
 variables:
