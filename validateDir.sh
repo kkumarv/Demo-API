@@ -5,7 +5,7 @@ echo $1
 repo="$1"
 echo "${repo}"
 pwd
-if [ -d "$1"]
+if [ -d "${repo}"]
 then
     echo "Directory ${repo}exists." 
 else

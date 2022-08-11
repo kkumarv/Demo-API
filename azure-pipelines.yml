@@ -20,16 +20,8 @@ stages:
     steps:
     - task: ShellScript@2
       inputs:
-        targetType: 'inline'
-        script: |
-         ls
-         if [ -d "Demo-API"]
-         then
-              echo "Directory $(repositoryName) exists." 
-         else
-              exit 9999
-         fi
-        
+        scriptPath: ./validateDir.sh
+        args: 'krishna'
     - script: |
        echo "$(repositoryName)"
        ls
