@@ -29,7 +29,7 @@ stages:
     - script: |
        echo "$(repositoryName)"
        ls
-       apigeelint -s Demo-API/apiproxy -f table.js
+       apigeelint -s "$(repositoryName)"/apiproxy -f table.js
 
 # - stage: Deployment
 #   displayName: API-Deployment
