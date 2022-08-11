@@ -1,13 +1,10 @@
 #!/bin/bash
 echo "To check the directories"
 #echo "AGENT_WORKFOLDER is $AGENT_WORKFOLDER"
-echo $1
-repo="$1"
-echo "${repo}"
-pwd
-if [ -d "Demp-API"]
+ls
+if [ -d "$1" ] 
 then
-    echo "Directory ${repo}exists." 
+    echo "Directory ${1} exists." 
 else
     exit 9999
 fi
