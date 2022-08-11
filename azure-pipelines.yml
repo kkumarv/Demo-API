@@ -15,17 +15,20 @@ variables:
 
 stages:
 - stage: Precheck
-  displayName: Static-Code-Analysis
+  displayName: Directory Validation and Code Analysis
   condition: always()
 
   jobs:
-  - job: Codeanalysis
+  - job: API Directory Validation
     continueOnError: false
     steps:
     - task: ShellScript@2
       inputs:
         scriptPath: ./validateDir.sh
         args: "$(repositoryName)"
+  - job: Static Code Analysis
+    continueOnError: false
+    steps:
     - script: |
        echo "$(repositoryName)"
        ls
