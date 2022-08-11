@@ -24,7 +24,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://{{host}}/mtn/demo",
+					"raw": "https://{{host}}/demo/api",
 					"protocol": "https",
 					"host": [
 						"{{host}}"
