@@ -30,8 +30,8 @@
 						"{{host}}"
 					],
 					"path": [
-						"mtn",
-						"demo"
+						"demo",
+						"api"
 					]
 				}
 			},
