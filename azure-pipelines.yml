@@ -51,6 +51,6 @@ stages:
     condition: succeeded()
     steps:
     - script: |
-        newman run  "$(repositoryName)"/resources/postman-integration-test/MTN_CICD.postman_collection.json -e HelloWorld/resources/postman-integration-test/chenosis-dev.postman_environment.json
+        newman run  "$(repositoryName)"/resources/postman-integration-test/MTN_CICD.postman_collection.json -e "$(repositoryName)"/resources/postman-integration-test/chenosis-dev.postman_environment.json
 
        
