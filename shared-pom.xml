@@ -181,10 +181,10 @@
                 <apigee.profile>dev</apigee.profile>
                 <apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
                 <apigee.apiversion>v1</apigee.apiversion>
-                <apigee.org>eu-west1-partner09</apigee.org>
+                <apigee.org>eu-west1-xxxxx/apigee.org>
                 <apigee.env>dev</apigee.env>
-                <apigee.username>krishna.v@nagarro.com</apigee.username>
-                <apigee.password>#Kri0112</apigee.password>
+                <apigee.username>krishna.xxxxx.com</apigee.username>
+                <apigee.password>#####</apigee.password>
             </properties>
         </profile>
     </profiles>
